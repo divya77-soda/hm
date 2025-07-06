@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hostel Warden App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Hostel Warden Login</h2>
+    <input type="text" id="username" placeholder="Enter username" />
+    <input type="password" id="password" placeholder="Enter password" />
+    <button onclick="login()">Login</button>
+    <p id="error"></p>
+  </div>
+
+  <div class="dashboard" id="dashboard" style="display: none;">
+    <h2>Dashboard</h2>
+    <button onclick="showAddStudent()">Add Student</button>
+    <button onclick="showStudents()">View Students</button>
+    <button onclick="logout()">Logout</button>
+
+    <div id="addStudent" class="card" style="display: none;">
+      <h3>Add Student</h3>
+      <input type="text" id="name" placeholder="Student Name" />
+      <input type="text" id="room" placeholder="Room Number" />
+      <input type="date" id="date" />
+      <input type="text" id="fee" placeholder="Fee Status (Paid/Pending)" />
+      <button onclick="addStudent()">Save</button>
+    </div>
+
+    <div id="studentList" class="card" style="display: none;"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
